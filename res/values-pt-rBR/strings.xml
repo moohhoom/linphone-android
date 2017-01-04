@@ -1,19 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--Custom-->
-  <string name="app_name">Linphone</string>
-  <string name="service_name">Linphone Service</string>
-  <string name="addressbook_label">Linphone</string>
-  <string name="notification_title">Linphone</string>
+  <string name="app_name">Tasqat Call</string>
+  <string name="service_name">Tasqat Call Service</string>
+  <string name="addressbook_label">Tasqat Call</string>
+  <string name="notification_title">Tasqat Call</string>
   <string name="wait_dialog_text">Começando</string>
   <string name="notification_registered">%s registrado</string>
   <string name="notification_register_failure">%s falhou ao registrar</string>
   <string name="tunnel_host"></string>
-  <string name="about_version">Linphone Android %s</string>
-  <string name="about_liblinphone_version">Linphone Core %s</string>
-  <string name="about_text">GNU General Public License V2\n © 2010-2016 Belledonne Communications</string>
-  <string name="about_link">www.linphone.org</string>
-  <string name="sync_account_name">Linphone Contatos</string>
+  <string name="about_version">Tasqat Call Android %s</string>
+  <string name="about_liblinphone_version">Tasqat Call Core %s</string>
+  <string name="about_text">GNU General Public License V2\n © 2010-2016 Tasqat</string>
+  <string name="about_link">call.taqat.co</string>
+  <string name="sync_account_name">Tasqat Call Contatos</string>
   <!--Common-->
   <string name="username">Usuário</string>
   <string name="phone_number">Número do telefone</string>
@@ -52,7 +52,7 @@
   <string name="assistant_finish">Finalizar configuração</string>
   <string name="assistant_remote_provisioning_desc">Por favor forneça sua URL de provisionamento </string>
   <string name="transport">Protocolo</string>
-  <string name="assistant_login_linphone">Use conta Linphone.</string>
+  <string name="assistant_login_linphone">Use conta Tasqat Call.</string>
   <string name="assistant_login_generic">Use conta SIP</string>
   <string name="assistant_remote_provisioning">Buscar configuração remota</string>
   <string name="assistant_display_name_optional">Mostar nome(opicional)</string>

@@ -1,4 +1,4 @@
-package org.linphone.tester;
+package co.taqat.call.tester;
 
 public class TesterLogger extends Tester {
 	private LogsActivity mLogsActivity;

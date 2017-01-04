@@ -21,7 +21,7 @@
 			<!-- use 'tee' command to write in file AND to stdout.
 			First is used below to check if tests failed or not
 			while second is used to get output in real time -->
-			<arg value="adb shell am instrument -r -w -e size ${test.size} org.linphone.test/com.zutubi.android.junitreport.JUnitReportTestRunner | tee ${output.file}"/>
+			<arg value="adb shell am instrument -r -w -e size ${test.size} co.taqat.call.test/com.zutubi.android.junitreport.JUnitReportTestRunner | tee ${output.file}"/>
 		</exec>
 		<exec executable="bash" >
 			<arg value="-c" />
@@ -40,7 +40,7 @@
 		</condition>
 		<exec executable="bash" unless:set="has.crashed">
 			<arg value="-c"/>
-			<arg value="adb shell cat /data/data/org.linphone/files/junit-report.xml > linphone-junit-report-${test.size}.xml"/>
+			<arg value="adb shell cat /data/data/co.taqat.call/files/junit-report.xml > linphone-junit-report-${test.size}.xml"/>
 		</exec>
 
 		<zip destfile="${archive.name}.zip">

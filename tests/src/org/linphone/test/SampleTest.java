@@ -1,7 +1,7 @@
-package org.linphone.test;
+package co.taqat.call.test;
 
-import org.linphone.LinphoneLauncherActivity;
-import org.linphone.LinphoneManager;
+import co.taqat.call.LinphoneLauncherActivity;
+import co.taqat.call.LinphoneManager;
 import org.linphone.core.LinphoneCall;
 import org.linphone.core.LinphoneCall.State;
 import org.linphone.core.LinphoneCore;

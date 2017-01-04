@@ -1,11 +1,11 @@
-package org.linphone.test;
+package co.taqat.call.test;
 
 import junit.framework.Assert;
 
-import org.linphone.FragmentsAvailable;
-import org.linphone.LinphoneActivity;
-import org.linphone.LinphoneManager;
-import org.linphone.LinphonePreferences;
+import co.taqat.call.FragmentsAvailable;
+import co.taqat.call.LinphoneActivity;
+import co.taqat.call.LinphoneManager;
+import co.taqat.call.LinphonePreferences;
 import org.linphone.core.LinphoneProxyConfig;
 
 import android.test.suitebuilder.annotation.LargeTest;
@@ -18,7 +18,7 @@ public class AccountManagement extends SampleTest {
 	public void testAEditAccount() {
 		goToSettings();
 		solo.clickOnText(iContext.getString(R.string.account_generic_login) + "@" + iContext.getString(R.string.account_generic_domain));
-		solo.clickOnText(aContext.getString(org.linphone.R.string.pref_username));
+		solo.clickOnText(aContext.getString(co.taqat.call.R.string.pref_username));
 		solo.enterText(0, "new");
 		
 		solo.clickOnView(solo.getView(android.R.id.button1));
@@ -41,7 +41,7 @@ public class AccountManagement extends SampleTest {
 		goToSettings();
 		solo.clickOnText(iContext.getString(R.string.account_generic_login) + "new");
 		selectItemInListOnUIThread(16);
-		solo.clickLongOnText(aContext.getString(org.linphone.R.string.pref_delete_account));
+		solo.clickLongOnText(aContext.getString(co.taqat.call.R.string.pref_delete_account));
 		
 		solo.goBack();
 		solo.goBack();
@@ -55,7 +55,7 @@ public class AccountManagement extends SampleTest {
 		goToSettings();
 		solo.clickOnText(iContext.getString(R.string.account_linphone_login));
 		selectItemInListOnUIThread(14);
-		solo.clickLongOnText(aContext.getString(org.linphone.R.string.pref_disable_account));
+		solo.clickLongOnText(aContext.getString(co.taqat.call.R.string.pref_disable_account));
 		
 		solo.goBack();
 		solo.goBack();
@@ -68,7 +68,7 @@ public class AccountManagement extends SampleTest {
 		goToSettings();
 		solo.clickOnText(iContext.getString(R.string.account_linphone_login));
 		selectItemInListOnUIThread(14);
-		solo.clickLongOnText(aContext.getString(org.linphone.R.string.pref_disable_account));
+		solo.clickLongOnText(aContext.getString(co.taqat.call.R.string.pref_disable_account));
 		
 		solo.goBack();
 		solo.goBack();
@@ -80,7 +80,7 @@ public class AccountManagement extends SampleTest {
 		solo.waitForActivity("LinphoneActivity", 2000);
 		solo.assertCurrentActivity("Expected Linphone Activity", LinphoneActivity.class);
 
-		solo.clickOnView(solo.getView(org.linphone.R.id.side_menu_button));
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.side_menu_button));
 		solo.clickOnText("Settings");
 	}
 }

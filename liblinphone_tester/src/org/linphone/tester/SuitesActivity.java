@@ -1,4 +1,4 @@
-package org.linphone.tester;
+package co.taqat.call.tester;
 
 import android.os.Bundle;
 import android.app.Activity;

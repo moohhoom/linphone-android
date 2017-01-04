@@ -1,4 +1,4 @@
-package org.linphone.test;
+package co.taqat.call.test;
 
 import junit.framework.Assert;
 

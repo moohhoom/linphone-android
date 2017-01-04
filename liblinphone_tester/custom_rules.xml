@@ -8,7 +8,7 @@
 			<arg value="-a" />
 			<arg value="android.intent.action.MAIN" />
 			<arg value="-n" />
-			<arg value="org.linphone.tester/org.linphone.tester.MainActivity" />
+			<arg value="co.taqat.call.tester/co.taqat.call.tester.MainActivity" />
 		</exec>
 	</target>
 	<target name="test">
@@ -30,7 +30,7 @@
 			<!-- use 'tee' command to write in file AND on stdout.
 			First is used below to check if tests failed or not while second
 			is used to get output in real time -->
-			<arg value="adb shell am instrument -r -w org.linphone.tester/org.linphone.tester.TestRunner | tee ${output.file}"/>
+			<arg value="adb shell am instrument -r -w co.taqat.call.tester/co.taqat.call.tester.TestRunner | tee ${output.file}"/>
 		</exec>
 		<exec executable="bash" >
 			<arg value="-c" />
@@ -48,7 +48,7 @@
 		</condition>
 		<exec executable="bash" unless:set="has.crashed">
 			<arg value="-c"/>
-			<arg value="adb shell cat /data/data/org.linphone.tester/files/junit-report.xml > liblinphone-junit-report.xml"/>
+			<arg value="adb shell cat /data/data/co.taqat.call.tester/files/junit-report.xml > liblinphone-junit-report.xml"/>
 		</exec>
 
 		<zip destfile="${archive.name}.zip">

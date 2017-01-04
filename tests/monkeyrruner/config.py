@@ -11,7 +11,7 @@ class ConfigurationTest(LinphoneTest):
 
 	def precond(self):
 		# Run the setup assistant
-		runComponent = 'org.linphone' + '/' + 'org.linphone.setup.SetupActivity'
+		runComponent = 'co.taqat.call' + '/' + 'co.taqat.call.setup.SetupActivity'
 		self.device.startActivity(component=runComponent)
 		MonkeyRunner.sleep(2)
 		

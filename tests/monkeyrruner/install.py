@@ -6,9 +6,9 @@ from lib.LinphoneTest import LinphoneTest
 class InstallTest(LinphoneTest):
 	def test(self):
 		# Parameters, must be the same as in the build.xml file
-		package = 'org.linphone'
+		package = 'co.taqat.call'
 		appname = 'Linphone'
-		activity = 'org.linphone.LinphoneLauncherActivity'
+		activity = 'co.taqat.call.LinphoneLauncherActivity'
 
 		# Installs the Android package. Notice that this method returns a boolean, so you can test
 		# to see if the installation worked.

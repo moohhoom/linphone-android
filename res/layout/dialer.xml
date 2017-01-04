@@ -11,7 +11,7 @@
 		android:layout_height="60dp"
 		android:layout_alignParentTop="true">
 
-		<org.linphone.ui.EraseButton
+		<co.taqat.call.ui.EraseButton
 			android:id="@+id/erase"
 			android:src="@drawable/backspace"
 			android:contentDescription="@string/content_description_backspace"
@@ -22,7 +22,7 @@
 			android:layout_marginRight="10dp"
 			android:layout_marginLeft="10dp" />
 
-		<org.linphone.ui.AddressText
+		<co.taqat.call.ui.AddressText
 			android:id="@+id/address"
 			android:background="@color/colorF"
 			android:textColorHint="@color/colorE"
@@ -39,7 +39,7 @@
 
 	</RelativeLayout>
 
-	<org.linphone.ui.Numpad
+	<co.taqat.call.ui.Numpad
 		android:id="@+id/numpad"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
@@ -73,7 +73,7 @@
 
 		</RelativeLayout>
 
-        <org.linphone.ui.CallButton
+        <co.taqat.call.ui.CallButton
 			android:id="@+id/call"
 			android:src="@drawable/call_audio_start"
 			android:background="@drawable/call"

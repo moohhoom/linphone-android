@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="custom_rules">
-	<property name="linphone.package.name" value="org.linphone" />
+	<property name="linphone.package.name" value="co.taqat.call" />
 
 	<target name="-pre-build" description="Move file that is not to be compiled.">
 		<copy file="submodules/linphone/share/xml/lpconfig.xsd"
@@ -65,7 +65,7 @@
 			<arg value="-a" />
 			<arg value="android.intent.action.MAIN" />
 			<arg value="-n" />
-			<arg value="${linphone.package.name}/org.linphone.LinphoneLauncherActivity" />
+			<arg value="${linphone.package.name}/co.taqat.call.LinphoneLauncherActivity" />
 		</exec>
 	</target>
 
@@ -74,10 +74,10 @@
 		<property name="out.library.jar.file" location="${out.absolute.dir}/liblinphone.jar" />
 		<jar destfile="${out.library.jar.file}">
 			<fileset dir="${out.classes.absolute.dir}"
-				includes="org/linphone/mediastream/**/*.class  org/linphone/core/**/*.class org/linphone/tools/**/*.class"/>
+				includes="co/taqat/call/mediastream/**/*.class  co/taqat/call/core/**/*.class co/taqat/call/tools/**/*.class"/>
 			<fileset dir="submodules/linphone/java" >
-				<include name="common/org/linphone/core/*.java"/>
-				<include name="j2se/org/linphone/core/*.java"/>
+				<include name="common/co/taqat/call/core/*.java"/>
+				<include name="j2se/co/taqat/call/core/*.java"/>
 			</fileset>
 		</jar>
 		<zip destfile="liblinphone-android-sdk-${version.name}.zip">
@@ -93,10 +93,10 @@
 		<property name="out.library.jar.file" location="${out.absolute.dir}/linphone.jar" />
 		<jar destfile="${out.library.jar.file}">
 			<fileset dir="${out.classes.absolute.dir}"
-				includes="org/linphone/mediastream/**/*.class  org/linphone/core/**/*.class org/linphone/**/*.class org/linphone/tools/**/*.class"/>
+				includes="co/taqat/call/mediastream/**/*.class  co/taqat/call/core/**/*.class co/taqat/call/**/*.class co/taqat/call/tools/**/*.class"/>
 			<fileset dir="submodules/linphone/java" >
-				<include name="common/org/linphone/core/*.java"/>
-				<include name="j2se/org/linphone/core/*.java"/>
+				<include name="common/co/taqat/call/core/*.java"/>
+				<include name="j2se/co/taqat/call/core/*.java"/>
 			</fileset>
 		</jar>
 		<zip destfile="linphone-android-sdk-${version.name}.zip">

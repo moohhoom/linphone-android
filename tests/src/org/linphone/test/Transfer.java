@@ -1,10 +1,10 @@
-package org.linphone.test;
+package co.taqat.call.test;
 
 import junit.framework.Assert;
 
-import org.linphone.CallActivity;
-import org.linphone.LinphoneActivity;
-import org.linphone.LinphoneManager;
+import co.taqat.call.CallActivity;
+import co.taqat.call.LinphoneActivity;
+import co.taqat.call.LinphoneManager;
 import org.linphone.core.LinphoneCall;
 import org.linphone.mediastream.Log;
 
@@ -17,20 +17,20 @@ public class Transfer extends SampleTest {
 	@MediumTest
 	@LargeTest
 	public void testACallTransfer() {
-		solo.enterText(0, iContext.getString(org.linphone.test.R.string.account_test_calls_login) + "@" + iContext.getString(org.linphone.test.R.string.account_test_calls_domain));
+		solo.enterText(0, iContext.getString(co.taqat.call.test.R.string.account_test_calls_login) + "@" + iContext.getString(co.taqat.call.test.R.string.account_test_calls_domain));
 		solo.sleep(1000);
-		solo.clickOnView(solo.getView(org.linphone.R.id.call));
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.call));
 		
 		assertCallIsCorrectlyRunning();
 
-		solo.clickOnView(solo.getView(org.linphone.R.id.options));
-		solo.clickOnView(solo.getView(org.linphone.R.id.transfer));
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.options));
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.transfer));
 		solo.waitForActivity("LinphoneActivity", 5000);
 		solo.assertCurrentActivity("Expected Linphone Activity", LinphoneActivity.class);
 		
-		solo.enterText(0, iContext.getString(org.linphone.test.R.string.conference_account_login) + "@" + iContext.getString(org.linphone.test.R.string.conference_account_domain));
+		solo.enterText(0, iContext.getString(co.taqat.call.test.R.string.conference_account_login) + "@" + iContext.getString(co.taqat.call.test.R.string.conference_account_domain));
 		solo.sleep(1000);
-		solo.clickOnView(solo.getView(org.linphone.R.id.call)); // Transfer button as the same id, only the image changes
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.call)); // Transfer button as the same id, only the image changes
 		
 		solo.sleep(2000);
 		Assert.assertTrue(LinphoneTestManager.getLc(1).getCallsNb() > 0);

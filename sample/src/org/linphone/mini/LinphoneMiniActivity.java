@@ -1,4 +1,4 @@
-package org.linphone.mini;
+package co.taqat.call.mini;
 /*
 LinphoneMiniActivity.java
 Copyright (C) 2014  Belledonne Communications, Grenoble, France

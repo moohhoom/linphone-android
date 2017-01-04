@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="org.linphone"
+          package="co.taqat.call"
           android:installLocation="auto"
           android:versionCode="3214"
           android:versionName="3.2.1">
@@ -11,9 +11,9 @@
 
     <!-- Permissions for Push Notification -->
     <permission
-        android:name="org.linphone.permission.C2D_MESSAGE"
+        android:name="co.taqat.call.permission.C2D_MESSAGE"
         android:protectionLevel="signature"/> <!-- Change package ! -->
-    <uses-permission android:name="org.linphone.permission.C2D_MESSAGE"/> <!-- Change package ! -->
+    <uses-permission android:name="co.taqat.call.permission.C2D_MESSAGE"/> <!-- Change package ! -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
@@ -252,7 +252,7 @@
                 <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
 
-                <category android:name="org.linphone"/> <!-- Change package ! -->
+                <category android:name="co.taqat.call"/> <!-- Change package ! -->
             </intent-filter>
         </receiver>
 

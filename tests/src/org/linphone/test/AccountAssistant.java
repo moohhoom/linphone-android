@@ -1,11 +1,11 @@
-package org.linphone.test;
+package co.taqat.call.test;
 
 import junit.framework.Assert;
 
-import org.linphone.LinphoneActivity;
-import org.linphone.LinphoneManager;
-import org.linphone.LinphonePreferences;
-import org.linphone.assistant.AssistantActivity;
+import co.taqat.call.LinphoneActivity;
+import co.taqat.call.LinphoneManager;
+import co.taqat.call.LinphonePreferences;
+import co.taqat.call.assistant.AssistantActivity;
 import org.linphone.core.LinphoneProxyConfig;
 import org.linphone.mediastream.video.capture.hwconf.Hacks;
 
@@ -38,19 +38,19 @@ public class AccountAssistant extends SampleTest {
 		solo.waitForActivity("AssistantActivity", 3000);
 		solo.assertCurrentActivity("Expected Assistant Activity", AssistantActivity.class);
 
-		solo.clickOnView(solo.getView(org.linphone.R.id.login_linphone));
-		solo.clickOnView(solo.getView(org.linphone.R.id.use_username));
-		solo.enterText((EditText) solo.getView(org.linphone.R.id.assistant_username), iContext.getString(R.string.account_linphone_login));
-		solo.enterText((EditText) solo.getView(org.linphone.R.id.assistant_password), iContext.getString(R.string.account_linphone_pwd));
-		solo.clickOnView(solo.getView(org.linphone.R.id.assistant_apply));
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.login_linphone));
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.use_username));
+		solo.enterText((EditText) solo.getView(co.taqat.call.R.id.assistant_username), iContext.getString(R.string.account_linphone_login));
+		solo.enterText((EditText) solo.getView(co.taqat.call.R.id.assistant_password), iContext.getString(R.string.account_linphone_pwd));
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.assistant_apply));
 
-		solo.clickOnView(solo.getView(org.linphone.R.id.assistant_skip));
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.assistant_skip));
 
 		solo.sleep(1000);
 
 		//Test echo calibration launch at first start
-		Assert.assertTrue(solo.searchText(aContext.getString(org.linphone.R.string.assistant_codec_down_question)));
-		solo.clickOnView(solo.getView(org.linphone.R.id.answerNo));
+		Assert.assertTrue(solo.searchText(aContext.getString(co.taqat.call.R.string.assistant_codec_down_question)));
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.answerNo));
 
 		solo.waitForActivity("LinphoneActivity", 8000);
 		Assert.assertTrue(solo.searchText(iContext.getString(R.string.account_linphone_login) + "@sip.linphone.org"));
@@ -64,13 +64,13 @@ public class AccountAssistant extends SampleTest {
 		//Check the wizard added sip.linphone.org custom settings
 		LinphonePreferences prefs = LinphonePreferences.instance();
 		String stunServer = prefs.getStunServer();
-		Assert.assertEquals(aContext.getString(org.linphone.R.string.default_stun), stunServer);
+		Assert.assertEquals(aContext.getString(co.taqat.call.R.string.default_stun), stunServer);
 				
 		String transport = prefs.getAccountTransportKey(0);
-		Assert.assertEquals(aContext.getString(org.linphone.R.string.pref_transport_tls_key), transport);
+		Assert.assertEquals(aContext.getString(co.taqat.call.R.string.pref_transport_tls_key), transport);
 				
 		String proxy = prefs.getAccountProxy(0);
-		Assert.assertEquals("<sip:" + aContext.getString(org.linphone.R.string.default_domain) + ";transport=tls>", proxy);
+		Assert.assertEquals("<sip:" + aContext.getString(co.taqat.call.R.string.default_domain) + ";transport=tls>", proxy);
 
 		String username = prefs.getAccountUsername(0);
 		Assert.assertEquals(iContext.getString(R.string.account_linphone_login), username);
@@ -89,11 +89,11 @@ public class AccountAssistant extends SampleTest {
 	public void testDLoginWithGenericAccount() {
 		startAssistant();
 
-		solo.clickOnView(solo.getView(org.linphone.R.id.login_generic));
-		solo.enterText((EditText) solo.getView(org.linphone.R.id.assistant_username), iContext.getString(R.string.account_generic_login));
-		solo.enterText((EditText) solo.getView(org.linphone.R.id.assistant_password), iContext.getString(R.string.account_generic_pwd));
-		solo.enterText((EditText) solo.getView(org.linphone.R.id.assistant_domain), iContext.getString(R.string.account_generic_domain));
-		solo.clickOnView(solo.getView(org.linphone.R.id.assistant_apply));
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.login_generic));
+		solo.enterText((EditText) solo.getView(co.taqat.call.R.id.assistant_username), iContext.getString(R.string.account_generic_login));
+		solo.enterText((EditText) solo.getView(co.taqat.call.R.id.assistant_password), iContext.getString(R.string.account_generic_pwd));
+		solo.enterText((EditText) solo.getView(co.taqat.call.R.id.assistant_domain), iContext.getString(R.string.account_generic_domain));
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.assistant_apply));
 
 		if (!Hacks.hasBuiltInEchoCanceller())
 			solo.waitForActivity("LinphoneActivity", 8000);
@@ -112,51 +112,51 @@ public class AccountAssistant extends SampleTest {
 	public void testECreateNewAccount() {
 		startAssistant();
 
-		solo.clickOnView(solo.getView(org.linphone.R.id.create_account));
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.create_account));
 
-		solo.enterText((EditText) solo.getView(org.linphone.R.id.username), iContext.getString(R.string.account_create_login).substring(0, 2));
+		solo.enterText((EditText) solo.getView(co.taqat.call.R.id.username), iContext.getString(R.string.account_create_login).substring(0, 2));
 		solo.sleep(200);
-		TextView error = (TextView) solo.getView(org.linphone.R.id.username_error);
+		TextView error = (TextView) solo.getView(co.taqat.call.R.id.username_error);
 		int sleepingTime = 1500;
-		Button createAccount = (Button) solo.getView(org.linphone.R.id.assistant_create);
+		Button createAccount = (Button) solo.getView(co.taqat.call.R.id.assistant_create);
 
-		Assert.assertEquals(error.getText(), aContext.getString(org.linphone.R.string.wizard_username_incorrect));
+		Assert.assertEquals(error.getText(), aContext.getString(co.taqat.call.R.string.wizard_username_incorrect));
 		Assert.assertFalse(createAccount.isEnabled());
 
-		solo.clearEditText((EditText) solo.getView(org.linphone.R.id.username));
-		solo.enterText((EditText) solo.getView(org.linphone.R.id.username), iContext.getString(R.string.account_linphone_login));
+		solo.clearEditText((EditText) solo.getView(co.taqat.call.R.id.username));
+		solo.enterText((EditText) solo.getView(co.taqat.call.R.id.username), iContext.getString(R.string.account_linphone_login));
 		solo.sleep(sleepingTime * 2);
-		Assert.assertEquals(error.getText(), aContext.getString(org.linphone.R.string.wizard_username_unavailable));
+		Assert.assertEquals(error.getText(), aContext.getString(co.taqat.call.R.string.wizard_username_unavailable));
 		Assert.assertFalse(createAccount.isEnabled());
 				
-		solo.enterText((EditText) solo.getView(org.linphone.R.id.password), iContext.getString(R.string.account_create_pwd).substring(0, 2));
+		solo.enterText((EditText) solo.getView(co.taqat.call.R.id.password), iContext.getString(R.string.account_create_pwd).substring(0, 2));
 		solo.sleep(sleepingTime);
-		error = (TextView) solo.getView(org.linphone.R.id.confirm_password_error);
-		Assert.assertEquals(error.getText(), aContext.getString(org.linphone.R.string.wizard_passwords_unmatched));
+		error = (TextView) solo.getView(co.taqat.call.R.id.confirm_password_error);
+		Assert.assertEquals(error.getText(), aContext.getString(co.taqat.call.R.string.wizard_passwords_unmatched));
 		Assert.assertFalse(createAccount.isEnabled());
 				
-		solo.clearEditText((EditText) solo.getView(org.linphone.R.id.password));
-		solo.enterText((EditText) solo.getView(org.linphone.R.id.password), iContext.getString(R.string.account_create_pwd).substring(0, 2));
-		solo.enterText((EditText) solo.getView(org.linphone.R.id.confirm_password), iContext.getString(R.string.account_create_pwd).substring(0,2));
+		solo.clearEditText((EditText) solo.getView(co.taqat.call.R.id.password));
+		solo.enterText((EditText) solo.getView(co.taqat.call.R.id.password), iContext.getString(R.string.account_create_pwd).substring(0, 2));
+		solo.enterText((EditText) solo.getView(co.taqat.call.R.id.confirm_password), iContext.getString(R.string.account_create_pwd).substring(0,2));
 		solo.sleep(sleepingTime);
-		error = (TextView) solo.getView(org.linphone.R.id.password_error);
-		Assert.assertEquals(error.getText(), aContext.getString(org.linphone.R.string.wizard_password_incorrect));
+		error = (TextView) solo.getView(co.taqat.call.R.id.password_error);
+		Assert.assertEquals(error.getText(), aContext.getString(co.taqat.call.R.string.wizard_password_incorrect));
 		Assert.assertFalse(createAccount.isEnabled());
 		
-		solo.enterText((EditText) solo.getView(org.linphone.R.id.email), iContext.getString(R.string.account_create_email).substring(0, 12));
+		solo.enterText((EditText) solo.getView(co.taqat.call.R.id.email), iContext.getString(R.string.account_create_email).substring(0, 12));
 		solo.sleep(sleepingTime);
-		error = (TextView) solo.getView(org.linphone.R.id.email_error);
-		Assert.assertEquals(error.getText(), aContext.getString(org.linphone.R.string.wizard_email_incorrect));
+		error = (TextView) solo.getView(co.taqat.call.R.id.email_error);
+		Assert.assertEquals(error.getText(), aContext.getString(co.taqat.call.R.string.wizard_email_incorrect));
 		Assert.assertFalse(createAccount.isEnabled());
 		
-		solo.clearEditText((EditText) solo.getView(org.linphone.R.id.username));
-		solo.clearEditText((EditText) solo.getView(org.linphone.R.id.password));
-		solo.clearEditText((EditText) solo.getView(org.linphone.R.id.confirm_password));
-		solo.clearEditText((EditText) solo.getView(org.linphone.R.id.email));
-		solo.enterText((EditText) solo.getView(org.linphone.R.id.username), iContext.getString(R.string.account_create_login));
-		solo.enterText((EditText) solo.getView(org.linphone.R.id.password), iContext.getString(R.string.account_create_pwd));
-		solo.enterText((EditText) solo.getView(org.linphone.R.id.confirm_password), iContext.getString(R.string.account_create_pwd));
-		solo.enterText((EditText) solo.getView(org.linphone.R.id.email), iContext.getString(R.string.account_create_email));
+		solo.clearEditText((EditText) solo.getView(co.taqat.call.R.id.username));
+		solo.clearEditText((EditText) solo.getView(co.taqat.call.R.id.password));
+		solo.clearEditText((EditText) solo.getView(co.taqat.call.R.id.confirm_password));
+		solo.clearEditText((EditText) solo.getView(co.taqat.call.R.id.email));
+		solo.enterText((EditText) solo.getView(co.taqat.call.R.id.username), iContext.getString(R.string.account_create_login));
+		solo.enterText((EditText) solo.getView(co.taqat.call.R.id.password), iContext.getString(R.string.account_create_pwd));
+		solo.enterText((EditText) solo.getView(co.taqat.call.R.id.confirm_password), iContext.getString(R.string.account_create_pwd));
+		solo.enterText((EditText) solo.getView(co.taqat.call.R.id.email), iContext.getString(R.string.account_create_email));
 		solo.sleep(sleepingTime);
 		Assert.assertEquals(error.getText(), "");
 		Assert.assertTrue(createAccount.isEnabled());
@@ -165,7 +165,7 @@ public class AccountAssistant extends SampleTest {
 	@LargeTest
 	public void testFCancelWizard() {
 		startAssistant();
-		solo.clickOnView(solo.getView(org.linphone.R.id.assistant_cancel));
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.assistant_cancel));
 		
 		solo.waitForActivity("LinphoneActivity", 2000);
 		solo.assertCurrentActivity("Expected Linphone Activity", LinphoneActivity.class);
@@ -175,7 +175,7 @@ public class AccountAssistant extends SampleTest {
 		solo.waitForActivity("LinphoneActivity", 2000);
 		solo.assertCurrentActivity("Expected Linphone Activity", LinphoneActivity.class);
 
-		solo.clickOnView(solo.getView(org.linphone.R.id.side_menu_button));
-		solo.clickOnText(aContext.getString(org.linphone.R.string.menu_assistant));
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.side_menu_button));
+		solo.clickOnText(aContext.getString(co.taqat.call.R.string.menu_assistant));
 	}
 }

@@ -61,7 +61,7 @@ You can speed up the compilation by using ccache (compiler cache, see [ccache.sa
 If you encounter the following issue:
 
 ```
-E/dalvikvm( 2465): dlopen("/data/app-lib/org.linphone-1/liblinphone-armeabi-v7a.so") failed: 
+E/dalvikvm( 2465): dlopen("/data/app-lib/co.taqat.call-1/liblinphone-armeabi-v7a.so") failed: 
 Cannot load library: soinfo_relocate(linker.cpp:975): cannot locate symbol "rand" referenced 
 by "liblinphone-armeabi-v7a.so"
 ```

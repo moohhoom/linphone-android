@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.linphone.tester"
+    package="co.taqat.call.tester"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -9,8 +9,8 @@
         android:targetSdkVersion="17" />
     
     <instrumentation 
-        android:targetPackage="org.linphone.tester" 
-        android:name="org.linphone.tester.TestRunner" />
+        android:targetPackage="co.taqat.call.tester" 
+        android:name="co.taqat.call.tester.TestRunner" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
@@ -25,7 +25,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="org.linphone.tester.MainActivity"
+            android:name="co.taqat.call.tester.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="nosensor"
             android:launchMode="singleTask">
@@ -36,13 +36,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="org.linphone.tester.LogsActivity"
+            android:name="co.taqat.call.tester.LogsActivity"
             android:label="@string/title_activity_logs"
             android:screenOrientation="nosensor"
             android:launchMode="singleTask">
         </activity>
         <activity
-            android:name="org.linphone.tester.SuitesActivity"
+            android:name="co.taqat.call.tester.SuitesActivity"
             android:label="@string/title_activity_suites"
             android:screenOrientation="nosensor"
             android:launchMode="singleTask">

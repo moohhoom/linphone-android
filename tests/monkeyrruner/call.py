@@ -6,7 +6,7 @@ from lib.LinphoneTest import LinphoneTest
 class CallTest(LinphoneTest):
 	def precond(self):
 		# Run Linphone
-		runComponent = 'org.linphone' + '/' + 'org.linphone.setup.LinphoneActivity'
+		runComponent = 'co.taqat.call' + '/' + 'co.taqat.call.setup.LinphoneActivity'
 		self.device.startActivity(component=runComponent)
 		
 		# Be sure to be on dialer screen

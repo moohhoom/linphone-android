@@ -1,4 +1,4 @@
-package org.linphone.tester;
+package co.taqat.call.tester;
 
 import junit.framework.TestSuite;
 import android.os.Bundle;

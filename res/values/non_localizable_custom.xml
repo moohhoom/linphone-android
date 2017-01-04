@@ -3,8 +3,8 @@
 
 	<!-- Global -->
 	<string name="default_domain">sip.linphone.org</string><!-- Set the default domain used for account creation/addresses -->
-	<string name="sync_account_type">org.linphone</string> <!-- Change package ! -->
-	<string name="sync_mimetype">vnd.android.cursor.item/org.linphone.profile</string> <!-- Change package, leave .profile at the end. Also change res/xml/contacts.xml ! -->
+	<string name="sync_account_type">co.taqat.call</string> <!-- Change package ! -->
+	<string name="sync_mimetype">vnd.android.cursor.item/co.taqat.call.profile</string> <!-- Change package, leave .profile at the end. Also change res/xml/contacts.xml ! -->
 	<bool name="orientation_portrait_only">false</bool>
 	<bool name="show_statusbar_only_on_dialer">false</bool>
 	<bool name="force_use_of_linphone_friends">false</bool>
@@ -59,15 +59,15 @@
 	<bool name="disable_all_security_features_for_markets">false</bool> <!-- Disable TLS/SRTP/ZRTP -->
 	<bool name="disable_all_patented_codecs_for_markets">false</bool> <!-- Disable MPEG4/H264 -->
 	<bool name="use_friendlist_subscription">true</bool>
-	<string name="default_stun">stun.linphone.org</string>
+	<string name="default_stun">stun.call.taqat.co</string>
 	<bool name="hide_accounts">false</bool>
 
 	<!-- Chat -->
 	<bool name="disable_chat">false</bool>
 	<bool name="disable_chat_message_notification">false</bool>
 	<bool name="disable_chat_send_file">false</bool>
-	<string name="temp_photo_name">linphone-android-photo-temp</string>
-	<string name="temp_photo_name_with_date">linphone-android-photo-%s</string>
+	<string name="temp_photo_name">tasqat-call-android-photo-temp</string>
+	<string name="temp_photo_name_with_date">tasqat-call-android-photo-%s</string>
 
 	<!-- Contacts -->
 	<bool name="hide_contact_phone_numbers">false</bool>
@@ -79,7 +79,7 @@
 	<bool name="display_contact_organization">true</bool>
 
 	<!-- Others Parameters-->
-	<string name="about_bugreport_email">linphone-android@belledonne-communications.com</string>
+	<string name="about_bugreport_email">ahmad@tasqat.com</string>
 	<bool name="enable_call_notification">true</bool>
 	<bool name="kill_service_with_task_manager">true</bool>
 
@@ -87,4 +87,3 @@
     <bool name="show_tutorials_instead_of_app">false</bool> <!-- Be careful ! Setting this to true prevent the app from working ! It will only display tutorial activities -->
 
 </resources>
-

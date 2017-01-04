@@ -1,8 +1,8 @@
-package org.linphone.test;
+package co.taqat.call.test;
 
 import junit.framework.Assert;
 
-import org.linphone.LinphoneActivity;
+import co.taqat.call.LinphoneActivity;
 import org.linphone.core.LinphoneChatMessage;
 import org.linphone.core.LinphoneChatMessage.State;
 import org.linphone.core.LinphoneChatRoom;
@@ -40,7 +40,7 @@ public class Chat extends SampleTest {
 	public void testBDisplayEmptyChatHistory() {
 		goToChat();
 		
-		Assert.assertTrue(solo.searchText(aContext.getString(org.linphone.R.string.no_chat_history)));
+		Assert.assertTrue(solo.searchText(aContext.getString(co.taqat.call.R.string.no_chat_history)));
 	}
 	
 	@SmallTest
@@ -49,11 +49,11 @@ public class Chat extends SampleTest {
 	public void testCSendTextMessage() {
 		goToChat();
 
-		solo.clickOnView(solo.getView(org.linphone.R.id.new_discussion));
-		solo.enterText((EditText)solo.getView(org.linphone.R.id.search_contact_field), "sip:" + iContext.getString(R.string.account_test_calls_login) + "@" + iContext.getString(R.string.account_test_calls_domain));
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.new_discussion));
+		solo.enterText((EditText)solo.getView(co.taqat.call.R.id.search_contact_field), "sip:" + iContext.getString(R.string.account_test_calls_login) + "@" + iContext.getString(R.string.account_test_calls_domain));
 
-		solo.enterText((EditText)solo.getView(org.linphone.R.id.message), iContext.getString(R.string.chat_test_text_sent));
-		solo.clickOnView(solo.getView(org.linphone.R.id.send_message));
+		solo.enterText((EditText)solo.getView(co.taqat.call.R.id.message), iContext.getString(R.string.chat_test_text_sent));
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.send_message));
 		
 		solo.sleep(1000);
 		Assert.assertTrue(solo.searchText(iContext.getString(R.string.chat_test_text_sent)));
@@ -64,7 +64,7 @@ public class Chat extends SampleTest {
 	@LargeTest
 	public void testDIsNotEmptyChatHistory() {
 		goToChat();
-		Assert.assertTrue(solo.searchText(iContext.getString(org.linphone.test.R.string.account_test_calls_login)));
+		Assert.assertTrue(solo.searchText(iContext.getString(co.taqat.call.test.R.string.account_test_calls_login)));
 	}
 	
 	@SmallTest
@@ -72,7 +72,7 @@ public class Chat extends SampleTest {
 	@LargeTest
 	public void testEReceiveTextMessage() {
 		goToChat();
-		solo.clickOnText(iContext.getString(org.linphone.test.R.string.account_test_calls_login));
+		solo.clickOnText(iContext.getString(co.taqat.call.test.R.string.account_test_calls_login));
 		
 		LinphoneChatRoom chatRoom = LinphoneTestManager.getLc().getOrCreateChatRoom("sip:" + iContext.getString(R.string.account_linphone_login) + "@" + iContext.getString(R.string.account_linphone_domain));
 		LinphoneChatMessage msg = chatRoom.createLinphoneChatMessage(iContext.getString(R.string.chat_test_text_received));
@@ -92,10 +92,10 @@ public class Chat extends SampleTest {
 	@LargeTest
 	public void testFDeleteMessage() {
 		goToChat();
-		solo.clickOnText(iContext.getString(org.linphone.test.R.string.account_test_calls_login));
+		solo.clickOnText(iContext.getString(co.taqat.call.test.R.string.account_test_calls_login));
 		
 		solo.clickLongOnText(iContext.getString(R.string.chat_test_text_received));
-		solo.clickOnText(aContext.getString(org.linphone.R.string.delete));
+		solo.clickOnText(aContext.getString(co.taqat.call.R.string.delete));
 
 		solo.sleep(1000);
 		Assert.assertFalse(solo.searchText(iContext.getString(R.string.chat_test_text_received)));
@@ -106,20 +106,20 @@ public class Chat extends SampleTest {
 	public void testGChatLandscape() {
 		goToChat();
 
-		solo.clickOnText(iContext.getString(org.linphone.test.R.string.account_test_calls_login));
+		solo.clickOnText(iContext.getString(co.taqat.call.test.R.string.account_test_calls_login));
 
 		solo.sleep(1000);
 		solo.setActivityOrientation(Solo.LANDSCAPE);
 		solo.sleep(1000);
 
-		solo.enterText((EditText) solo.getView(org.linphone.R.id.message), iContext.getString(R.string.chat_test_text_sent));
-		solo.clickOnView(solo.getView(org.linphone.R.id.send_message));
+		solo.enterText((EditText) solo.getView(co.taqat.call.R.id.message), iContext.getString(R.string.chat_test_text_sent));
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.send_message));
 
 		solo.sleep(1000);
 		Assert.assertTrue(solo.searchText(iContext.getString(R.string.chat_test_text_sent)));
 		Assert.assertEquals(iContext.getString(R.string.chat_test_text_sent), LinphoneTestManager.getInstance().lastMessageReceived);
 
-		solo.clickOnView(solo.getView(org.linphone.R.id.back));
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.back));
 
 		solo.sleep(1000);
 		Assert.assertTrue(solo.searchText(iContext.getString(R.string.account_test_calls_login)));
@@ -130,20 +130,20 @@ public class Chat extends SampleTest {
 	public void testHDeleteConversation() {
 		goToChat();
 		
-		/*solo.clickOnText(aContext.getString(org.linphone.R.string.button_edit));
+		/*solo.clickOnText(aContext.getString(co.taqat.call.R.string.button_edit));
 		solo.sleep(1000);
-		solo.clickOnView(solo.getView(org.linphone.R.id.delete));
-		solo.clickOnText(aContext.getString(org.linphone.R.string.button_ok));
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.delete));
+		solo.clickOnText(aContext.getString(co.taqat.call.R.string.button_ok));
 
 		solo.sleep(1000);
-		Assert.assertTrue(solo.searchText(aContext.getString(org.linphone.R.string.no_chat_history)));*/
+		Assert.assertTrue(solo.searchText(aContext.getString(co.taqat.call.R.string.no_chat_history)));*/
 	}
 	
 	private void goToChat() {
 		solo.waitForActivity("LinphoneActivity", 2000);
 		solo.assertCurrentActivity("Expected Linphone Activity", LinphoneActivity.class);
 		
-		solo.clickOnView(solo.getView(org.linphone.R.id.chat));
+		solo.clickOnView(solo.getView(co.taqat.call.R.id.chat));
 	}
 	
 }

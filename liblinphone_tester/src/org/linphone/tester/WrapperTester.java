@@ -1,4 +1,4 @@
-package org.linphone.tester;
+package co.taqat.call.tester;
 
 import org.linphone.core.LinphoneCallParams;
 import org.linphone.core.LinphoneCore;

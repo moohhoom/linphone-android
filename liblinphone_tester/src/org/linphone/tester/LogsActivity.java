@@ -1,4 +1,4 @@
-package org.linphone.tester;
+package co.taqat.call.tester;
 
 import java.util.Arrays;
 import java.util.LinkedList;

@@ -1,8 +1,8 @@
-package org.linphone.test;
+package co.taqat.call.test;
 
 import static android.content.Intent.ACTION_MAIN;
 
-import org.linphone.LinphoneService;
+import co.taqat.call.LinphoneService;
 
 import android.content.Intent;
 import android.test.suitebuilder.annotation.LargeTest;

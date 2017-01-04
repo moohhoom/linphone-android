@@ -18,7 +18,7 @@ cat > $D/.classpath <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry excluding="org/linphone/mediastream/MediastreamerActivity.java" kind="src" path="submodules/linphone/mediastreamer2/java/src"/>
+	<classpathentry excluding="co/taqat/call/mediastream/MediastreamerActivity.java" kind="src" path="submodules/linphone/mediastreamer2/java/src"/>
 	<classpathentry kind="src" path="submodules/linphone/java/j2se"/>
 	<classpathentry kind="src" path="submodules/linphone/java/common"/>
 	<classpathentry kind="src" path="submodules/linphone/java/impl"/>
@@ -36,14 +36,14 @@ EOF
 # Fix package name
 (
 cd $D
-grep -R "org.linphone.R" . -l  | grep java | xargs sed -i 's/org\.linphone\.R/org\.linphone\.sdk\.R/g'
+grep -R "co.taqat.call.R" . -l  | grep java | xargs sed -i 's/org\.linphone\.R/org\.linphone\.sdk\.R/g'
 )
 
 # Create a basic AndroidManifest.xml
 cat > $D/AndroidManifest.xml <<EOF
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.linphone" android:versionCode="1" android:versionName="1.0">
+    package="co.taqat.call" android:versionCode="1" android:versionName="1.0">
 
 	<uses-sdk android:minSdkVersion="4"/>
     
@@ -62,7 +62,7 @@ cat > $D/AndroidManifest.xml <<EOF
 	<supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:anyDensity="true"/>
 
     <application>
-		<activity android:name="org.linphone.TestConferenceActivity"
+		<activity android:name="co.taqat.call.TestConferenceActivity"
 	              android:label="Conf test"
 	              android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
 	              android:enabled="false">
