@@ -46,6 +46,7 @@ public class DialerFragment extends Fragment {
 	private AddressAware numpad;
 	private AddressText mAddress;
 	private CallButton mCall;
+	private CallButton mCallv;
 	private ImageView mAddContact;
 	private OnClickListener addContactListener, cancelListener, transferListener;
 	private boolean shouldEmptyAddressField = true;
@@ -63,6 +64,10 @@ public class DialerFragment extends Fragment {
 
 		mCall = (CallButton) view.findViewById(R.id.call);
 		mCall.setAddressWidget(mAddress);
+
+		mCallv = (CallButton) view.findViewById(R.id.callv);
+		mCallv.setAddressWidget(mAddress);
+
 		if (LinphoneActivity.isInstanciated() && LinphoneManager.getLc().getCallsNb() > 0) {
 			if (isCallTransferOngoing) {
 				mCall.setImageResource(R.drawable.call_transfer);
@@ -70,11 +75,11 @@ public class DialerFragment extends Fragment {
 				mCall.setImageResource(R.drawable.call_add);
 			}
 		} else {
-			if (LinphoneManager.getLc().getVideoAutoInitiatePolicy()) {
+			/*if (LinphoneManager.getLc().getVideoAutoInitiatePolicy()) {
 				mCall.setImageResource(R.drawable.call_video_start);
 			} else {
 				mCall.setImageResource(R.drawable.call_audio_start);
-			}
+			}*/
 		}
 
 		numpad = (AddressAware) view.findViewById(R.id.numpad);
@@ -193,11 +198,11 @@ public class DialerFragment extends Fragment {
 			mAddContact.setImageResource(R.drawable.call_alt_back);
 			mAddContact.setOnClickListener(cancelListener);
 		} else {
-			if (LinphoneManager.getLc().getVideoAutoInitiatePolicy()) {
+			/*if (LinphoneManager.getLc().getVideoAutoInitiatePolicy()) {
 				mCall.setImageResource(R.drawable.call_video_start);
 			} else {
 				mCall.setImageResource(R.drawable.call_audio_start);
-			}
+			}*/
 			mAddContact.setEnabled(false);
 			mAddContact.setImageResource(R.drawable.contact_add_button);
 			mAddContact.setOnClickListener(addContactListener);

@@ -12,7 +12,7 @@
     <string name="tunnel_host"></string>
     <string name="about_version">Taqat Call Android %s</string>
     <string name="about_liblinphone_version">Tasqat Call Core %s</string>
-    <string name="about_text">GNU General Public License V2\n © 2010-2016 Tasqat</string>
+    <string name="about_text">GNU General Public License V2\n © 2010-2017 Tasqat</string>
     <string name="about_link">call.taqat.co</string>
     <string name="sync_account_name">tasqat call contacts</string>
     <string name="history_date_format">EEE, d MMM</string>
@@ -59,7 +59,7 @@
     <string name="link_account">Link your account</string>
 
     <!-- Launch screen -->
-    <string name="app_description">the <i>libre</i> SIP client</string>
+    <string name="app_description"><i>Connects you..</i></string>
 
     <!-- Assistant -->
     <string name="welcome">Welcome</string>
@@ -71,14 +71,14 @@
     <string name="assistant_finish">Finish configuration</string>
     <string name="assistant_validate_account_1">Your account is created. Please check your mails to validate your account:</string>
     <string name="assistant_validate_account_2">Once it is done, come back here and click on the button.</string>
-    <string name="assistant_welcome_desc">This assistant will help you configure and use your SIP account.</string>
+    <string name="assistant_welcome_desc">This assistant will help you configure and use your Demo account.</string>
     <string name="assistant_linphone_login_desc">Please enter your username and password of Tasqat Call account</string>
-    <string name="assistant_login_desc">Please enter your username and password with your SIP domain</string>
+    <string name="assistant_login_desc">Please enter your username and password with your Demo Account</string>
     <string name="assistant_remote_provisioning_desc">Please provide your provisioning URL</string>
     <string name="transport">Transport</string>
     <string name="assistant_create_account_phone_number_address">Your SIP address is</string>
     <string name="assistant_login_linphone">Use Tasqat Call account</string>
-    <string name="assistant_login_generic">Use SIP account</string>
+    <string name="assistant_login_generic">Use Demo account</string>
     <string name="assistant_remote_provisioning">Fetch remote configuration</string>
     <string name="assistant_create_account_part_1">Please confirm your country code and enter your phone number</string>
     <string name="assistant_create_account_part_2">We have sent you a SMS with a validation code to your phone number:</string>
@@ -86,7 +86,7 @@
     <string name="assistant_create_account_part_email">Please enter an username, email and password for your Tasqat Call account</string>
     <string name="assistant_display_name_optional">Display name (optional)</string>
     <string name="assistant_linphone_account">Use your Tasqat Call account</string>
-    <string name="assistant_generic_account">Use SIP account</string>
+    <string name="assistant_generic_account">Use Demo account</string>
     <string name="assistant_remote_provisioning_title">Fetch remote configuration</string>
     <string name="assistant_fetch_apply">Fetch and apply</string>
     <string name="assistant_login">Login</string>
@@ -152,7 +152,7 @@
     <string name="inapp_notification_account_expire">The subscription period expires on %s</string>
 
     <!-- Dailer -->
-    <string name="address_bar_hint">Enter a number or an address</string>
+    <string name="address_bar_hint">Enter a number</string>
 
     <!-- History -->
     <string name="no_call_history">No call in your history</string>
@@ -258,7 +258,7 @@
     <string name="remote_provisioning_again_message">Do you want to change the provisioning URI?</string>
 
     <!-- Account Settings -->
-    <string name="pref_sipaccount">SIP Account</string>
+    <string name="pref_sipaccount">Demo Account</string>
     <string name="pref_manage_title">Manage</string>
     <string name="pref_disable_account">Disable</string>
     <string name="pref_proxy">Proxy</string>
@@ -292,7 +292,7 @@
     <string name="pref_password_changed">Password changed</string>
 
     <!-- Settings -->
-    <string name="pref_sipaccounts">SIP Accounts</string>
+    <string name="pref_sipaccounts">Demo Accounts</string>
     <string name="default_account_flag">Default account</string>
     <string name="pref_add_account">Add account</string>
     <string name="pref_in_app_store">In-app Store</string>
@@ -368,7 +368,7 @@
     <string name="pref_turn_passwd_title">STUN / TURN password (optional)</string>
     <string name="pref_upnp_enable">Enable UPNP</string>
     <string name="pref_transport_use_random_ports">Use random ports</string>
-    <string name="pref_sip_port_title">SIP port to use</string>
+    <string name="pref_sip_port_title">Demo port to use</string>
     <string name="pref_video_port_title">Video port or port range</string>
     <string name="pref_audio_port_title">Audio port or port range</string>
     <string name="pref_video_port_description">Video port or port range (minport-maxport)</string>

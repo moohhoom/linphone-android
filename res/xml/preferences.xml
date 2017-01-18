@@ -20,7 +20,9 @@
 	    <PreferenceScreen
 		    android:title="@string/pref_tunnel"
 		    android:key="@string/pref_tunnel_key"
-		    android:persistent="false">
+		    android:persistent="false"
+			android:selectable="false"
+			android:enabled="false">
 		    
 		    <PreferenceCategory
 		        android:title="@string/pref_tunnel">
@@ -49,7 +51,8 @@
 	    </PreferenceScreen>
 
 		<PreferenceScreen
-		    android:title="@string/pref_audio_title">
+		    android:title="@string/pref_audio_title"
+			android:enabled="false">
 			
 		    <PreferenceCategory
 				android:title="@string/pref_audio_title">
@@ -94,7 +97,8 @@
 		<PreferenceScreen
 		    android:title="@string/pref_video_title"
 		    android:key="@string/pref_video_key"
-		    android:persistent="false">
+		    android:persistent="false"
+			android:enabled="false">
 			
 		    <PreferenceCategory
 				android:title="@string/pref_video_title">
@@ -176,7 +180,8 @@
 		</PreferenceScreen>
 
 		<PreferenceScreen
-		    android:title="@string/pref_call_title">
+		    android:title="@string/pref_call_title"
+			android:enabled="false">
 			
 		    <PreferenceCategory
 				android:title="@string/pref_call_title">
@@ -216,7 +221,8 @@
 	    </PreferenceScreen>
 	    
 		<PreferenceScreen
-		    android:title="@string/pref_chat_title">
+		    android:title="@string/pref_chat_title"
+			android:enabled="false">
 		    
 		    <PreferenceCategory
 				android:title="@string/pref_chat_title">
@@ -238,7 +244,8 @@
 		</PreferenceScreen>
 
 		<PreferenceScreen
-		    android:title="@string/pref_network_title">
+		    android:title="@string/pref_network_title"
+			android:enabled="false">
 			
 		    <PreferenceCategory
 				android:title="@string/pref_network_title">
@@ -321,7 +328,9 @@
 		</PreferenceScreen>
 
 		<PreferenceScreen
-		    android:title="@string/pref_advanced_title">
+		    android:title="@string/pref_advanced_title"
+			android:selectable="false"
+			android:enabled="false">
 			
 		    <PreferenceCategory
 				android:title="@string/pref_advanced_title">

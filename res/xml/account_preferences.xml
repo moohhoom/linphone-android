@@ -41,7 +41,8 @@
     <PreferenceCategory
     	android:title="@string/pref_advanced_title"
 		android:key="@string/pref_advanced_key"
-		android:persistent="false">
+		android:persistent="false"
+		android:enabled="false">
 
 		<ListPreference
 		    android:title="@string/pref_transport"

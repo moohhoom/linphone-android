@@ -86,10 +86,20 @@
 			android:src="@drawable/call_audio_start"
 			android:background="@drawable/call"
 			android:contentDescription="@string/content_description_call"
-            android:layout_width="match_parent"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
 			android:padding="12dp"
-            android:layout_weight="0.5"/>
+			android:screenOrientation="portrait"/>
+
+		<co.taqat.call.ui.CallButton
+			android:id="@+id/callv"
+			android:src="@drawable/call_video_start"
+			android:background="@drawable/call"
+			android:contentDescription="@string/content_description_call"
+			android:layout_width="220dp"
+			android:layout_height="wrap_content"
+			android:padding="12dp"
+			android:layout_marginLeft="2dp"/>
 
 	</LinearLayout>
 

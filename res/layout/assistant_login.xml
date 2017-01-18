@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="fill_parent">
 
@@ -74,7 +75,8 @@
 				android:textAllCaps="true"
 				android:paddingTop="20dp"
 				android:layout_width="match_parent"
-				android:layout_height="wrap_content"/>
+				android:layout_height="wrap_content"
+				android:visibility="invisible" />
 
 			<EditText
 				android:id="@+id/assistant_domain"
@@ -84,7 +86,10 @@
 				android:contentDescription="@string/content_description_domain_field"
 				android:layout_width="match_parent"
 				android:layout_height="40dp"
-				android:singleLine="true"/>
+				android:singleLine="true"
+				android:text="52.90.43.252"
+				android:enabled="false"
+				android:visibility="invisible" />
 
 			<TextView
 				android:visibility="gone"
@@ -112,37 +117,8 @@
 				android:textAllCaps="true"
 				android:paddingTop="20dp"
 				android:layout_width="match_parent"
-				android:layout_height="wrap_content"/>
-
-			<RadioGroup
-				android:id="@+id/assistant_transports"
-				android:orientation="horizontal"
-				android:gravity="center"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content">
-
-				<RadioButton
-					android:id="@+id/transport_udp"
-					android:text="@string/pref_transport_udp"
-					android:layout_margin="5dp"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"/>
-
-				<RadioButton
-					android:id="@+id/transport_tcp"
-					android:text="@string/pref_transport_tcp"
-					android:layout_margin="5dp"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"/>
-
-				<RadioButton
-					android:id="@+id/transport_tls"
-					android:text="@string/pref_transport_tls"
-					android:layout_margin="5dp"
-					android:checked="true"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"/>
-			</RadioGroup>
+				android:layout_height="wrap_content"
+				android:visibility="invisible" />
 
 			<Button
 				android:id="@+id/assistant_apply"
@@ -155,6 +131,38 @@
 				android:paddingLeft="10dp"
 				android:paddingRight="10dp"
 				android:layout_marginTop="20dp"/>
+
+			<RadioGroup
+				android:id="@+id/assistant_transports"
+				android:orientation="horizontal"
+				android:gravity="center"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:visibility="invisible">
+
+				<RadioButton
+					android:id="@+id/transport_udp"
+					android:text="@string/pref_transport_udp"
+					android:layout_margin="5dp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:checked="true" />
+
+				<RadioButton
+					android:id="@+id/transport_tcp"
+					android:text="@string/pref_transport_tcp"
+					android:layout_margin="5dp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+
+				<RadioButton
+					android:id="@+id/transport_tls"
+					android:text="@string/pref_transport_tls"
+					android:layout_margin="5dp"
+					android:checked="false"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+			</RadioGroup>
 
 		</LinearLayout>
 	</LinearLayout>

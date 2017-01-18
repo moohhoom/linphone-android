@@ -73,15 +73,26 @@
 
 		</RelativeLayout>
 
-        <co.taqat.call.ui.CallButton
+		<co.taqat.call.ui.CallButton
 			android:id="@+id/call"
 			android:src="@drawable/call_audio_start"
 			android:background="@drawable/call"
 			android:contentDescription="@string/content_description_call"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+			android:layout_width="130dp"
+			android:layout_height="wrap_content"
 			android:padding="12dp"
-            android:layout_weight="0.5"/>
+			android:layout_marginLeft="2dp"/>
+
+		<co.taqat.call.ui.CallButton
+			android:id="@+id/callv"
+			android:src="@drawable/call_video_start"
+			android:background="@drawable/call"
+			android:contentDescription="@string/content_description_call"
+			android:layout_width="130dp"
+			android:layout_height="wrap_content"
+			android:padding="12dp"
+			android:layout_marginLeft="2dp"
+			/>
 
 	</LinearLayout>
 

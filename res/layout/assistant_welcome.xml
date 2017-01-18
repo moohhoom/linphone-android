@@ -42,7 +42,8 @@
 				android:contentDescription="@string/assistant_create_account"
 				android:layout_marginTop="30dp"
 				android:layout_width="match_parent"
-				android:layout_height="40dp"/>
+				android:layout_height="40dp"
+				android:enabled="false" />
 
 
 			<Button
@@ -53,7 +54,8 @@
 				android:contentDescription="@string/assistant_login_linphone"
 				android:layout_width="match_parent"
 				android:layout_height="40dp"
-				android:layout_marginTop="30dp"/>
+				android:layout_marginTop="30dp"
+				android:enabled="false" />
 
 			<Button
 				android:id="@+id/login_generic"
@@ -73,7 +75,8 @@
 				android:contentDescription="@string/assistant_remote_provisioning"
 				android:layout_width="match_parent"
 				android:layout_height="40dp"
-				android:layout_marginTop="30dp"/>
+				android:layout_marginTop="30dp"
+				android:visibility="invisible" />
 
 		</LinearLayout>
 	</LinearLayout>
