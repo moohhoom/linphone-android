@@ -9,7 +9,8 @@ use_ipv6=1
 keepalive_period=30000
 sip_port=-1
 sip_tcp_port=-1
-sip_tls_port=-1
+sip_tls_port=5061
+verify_server_certs=0
 
 [video]
 size=qvga

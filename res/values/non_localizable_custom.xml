@@ -5,7 +5,7 @@
 	<string name="default_domain">sip.linphone.org</string><!-- Set the default domain used for account creation/addresses -->
 	<string name="sync_account_type">co.taqat.call</string> <!-- Change package ! -->
 	<string name="sync_mimetype">vnd.android.cursor.item/co.taqat.call.profile</string> <!-- Change package, leave .profile at the end. Also change res/xml/contacts.xml ! -->
-	<bool name="orientation_portrait_only">false</bool>
+	<bool name="orientation_portrait_only">true</bool>
 	<bool name="show_statusbar_only_on_dialer">false</bool>
 	<bool name="force_use_of_linphone_friends">false</bool>
 	<bool name="use_linphone_tag">true</bool>
@@ -24,10 +24,11 @@
 	<bool name="pre_fill_email_in_assistant">true</bool> <!-- Set the email field of the wizard with one of the gmail account registered on the device -->
 	<bool name="assistant_account_validation_mandatory">false</bool>
 	<bool name="allow_only_phone_numbers_in_assistant">false</bool>
-	<bool name="hide_linphone_accounts_in_assistant">false</bool>
+	<bool name="hide_linphone_accounts_in_assistant">true</bool>
 	<bool name="hide_generic_accounts_in_assistant">false</bool>
-	<bool name="hide_remote_provisioning_in_assistant">false</bool>
+	<bool name="hide_remote_provisioning_in_assistant">true</bool>
 	<bool name="display_account_assistant_at_first_start">true</bool>
+	<bool name="hide_create_account_in_assistant">true</bool>
 
 	<!-- Remote provisioning -->
 	<bool name="display_sms_remote_provisioning_activity">false</bool>
@@ -46,12 +47,12 @@
 	<string name="push_sender_id">622464153529</string>
 
 	<!-- Call -->
-	<bool name="forbid_self_call">false</bool>
+	<bool name="forbid_self_call">true</bool>
 	<bool name="allow_ringing_while_early_media">true</bool>
 	<bool name="allow_transfers">true</bool>
 	<bool name="disable_options_in_call">false</bool>
 	<bool name="automatically_start_intercepted_outgoing_gsm_call">true</bool><!-- This settings handle the behavior of the view waiting for the remote provisioning configuration to be done -->
-	<bool name="hide_camera_settings">false</bool>
+	<bool name="hide_camera_settings">true</bool>
 	<bool name="hide_in_call_stats">false</bool>
 
 	<!-- Settings -->
@@ -65,7 +66,7 @@
 	<!-- Chat -->
 	<bool name="disable_chat">false</bool>
 	<bool name="disable_chat_message_notification">false</bool>
-	<bool name="disable_chat_send_file">false</bool>
+	<bool name="disable_chat_send_file">true</bool>
 	<string name="temp_photo_name">tasqat-call-android-photo-temp</string>
 	<string name="temp_photo_name_with_date">tasqat-call-android-photo-%s</string>
 

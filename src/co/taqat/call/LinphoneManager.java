@@ -1674,7 +1674,7 @@ public class LinphoneManager implements LinphoneCoreListener, LinphoneChatMessag
 	@Override
 	public void onAccountCreatorAccountLinkedWithPhoneNumber(LinphoneAccountCreator accountCreator, LinphoneAccountCreator.Status status) {
 		if (status.equals(LinphoneAccountCreator.Status.AccountNotLinked)) {
-			askLinkWithPhoneNumber();
+			//askLinkWithPhoneNumber();
 		}
 	}
 

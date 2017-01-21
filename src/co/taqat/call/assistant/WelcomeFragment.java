@@ -38,9 +38,6 @@ public class WelcomeFragment extends Fragment implements OnClickListener {
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.assistant_welcome, container, false);
 
-		createAccount = (Button) view.findViewById(R.id.create_account);
-		createAccount.setOnClickListener(this);
-
 		logLinphoneAccount = (Button) view.findViewById(R.id.login_linphone);
 		if (getResources().getBoolean(R.bool.hide_linphone_accounts_in_assistant)) {
 			logLinphoneAccount.setVisibility(View.GONE);
@@ -61,7 +58,15 @@ public class WelcomeFragment extends Fragment implements OnClickListener {
 		} else {
 			remoteProvisioning.setOnClickListener(this);
 		}
-		
+
+		createAccount = (Button) view.findViewById(R.id.create_account);
+		if (getResources().getBoolean(R.bool.hide_create_account_in_assistant)) {
+			createAccount.setVisibility(View.GONE);
+		} else {
+			createAccount.setOnClickListener(this);
+		}
+
+
 		return view;
 	}
 

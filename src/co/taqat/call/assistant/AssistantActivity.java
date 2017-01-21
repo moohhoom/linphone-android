@@ -116,9 +116,9 @@ private static AssistantActivity instance;
 
 		if (getIntent().getBooleanExtra("LinkPhoneNumber",false)) {
 			isLink = true;
-			if (getIntent().getBooleanExtra("FromPref",false))
-				fromPref = true;
-			displayCreateAccount();
+			//if (getIntent().getBooleanExtra("FromPref",false)){
+			//	fromPref = true;
+			//displayCreateAccount();
 		} else {
 			firstFragment = getResources().getBoolean(R.bool.assistant_use_linphone_login_as_first_fragment) ? AssistantFragmentsEnum.LINPHONE_LOGIN : AssistantFragmentsEnum.WELCOME;
 			if (findViewById(R.id.fragment_container) != null) {
@@ -279,7 +279,9 @@ private static AssistantActivity instance;
 			if(lastFragment.equals(AssistantFragmentsEnum.LINPHONE_LOGIN)){
 				displayLoginLinphone();
 			} else {
-				displayCreateAccount();
+				LinphonePreferences.instance().firstLaunchSuccessful();
+				startActivity(new Intent().setClass(this, LinphoneActivity.class));
+				finish();
 			}
 		}
 	}
@@ -687,17 +689,22 @@ private static AssistantActivity instance;
 
 	@Override
 	public void onAccountCreatorIsAccountUsed(LinphoneAccountCreator accountCreator, LinphoneAccountCreator.Status status) {
-		if(status.equals(LinphoneAccountCreator.Status.AccountExistWithAlias)){
-			success();
+		if(status.equals(LinphoneAccountCreator.Status.Failed)){
+			hideKeyboard();
+			LinphonePreferences.instance().firstLaunchSuccessful();
+			startActivity(new Intent().setClass(this, LinphoneActivity.class));
+			finish();
 		} else {
-			isLink = true;
-			displayCreateAccount();
+			//isLink = true;
+			//displayCreateAccount();
 		}
 
 	}
 
 	@Override
 	public void onAccountCreatorAccountCreated(LinphoneAccountCreator accountCreator, LinphoneAccountCreator.Status status) {
+
+
 
 	}
 
