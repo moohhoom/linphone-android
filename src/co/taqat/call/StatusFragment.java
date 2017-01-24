@@ -115,7 +115,10 @@ public class StatusFragment extends Fragment {
 					statusText.setOnClickListener(new OnClickListener() {
 						@Override
 						public void onClick(View v) {
+							if (!isInCall)
 							lc.refreshRegisters();
+
+
 						}
 					});
 				} catch (IllegalStateException ise) {}
@@ -495,6 +498,9 @@ public class StatusFragment extends Fragment {
 			layout.setVisibility(View.GONE);
 			title.setVisibility(TextView.GONE);
 		}
+		layout.setVisibility(View.GONE);
+		title.setVisibility(TextView.GONE);
+
 	}
 
 	public void initCallStatsRefresher(final LinphoneCall call, final View view) {

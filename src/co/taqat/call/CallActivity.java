@@ -429,7 +429,7 @@ public class CallActivity extends LinphoneGenericActivity implements OnClickList
 			} catch (NullPointerException npe) { Log.e("Bluetooth: Audio routes menu disabled on tablets for now (3)"); }
 		}
 
-		createInCallStats();
+		//createInCallStats();
 		LinphoneManager.getInstance().changeStatusToOnThePhone();
 	}
 

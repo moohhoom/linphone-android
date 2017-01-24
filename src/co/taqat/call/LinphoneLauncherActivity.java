@@ -85,7 +85,7 @@ public class LinphoneLauncherActivity extends Activity {
 				startActivity(new Intent().setClass(LinphoneLauncherActivity.this, classToStart).setData(getIntent().getData()));
 				finish();
 			}
-		}, 1000);
+		}, 1500);
 	}
 
 	private class ServiceWaitThread extends Thread {

@@ -420,8 +420,8 @@ public class LinphoneActivity extends LinphoneGenericActivity implements OnClick
 	private void changeFragment(Fragment newFragment, FragmentsAvailable newFragmentType, boolean withoutAnimation) {
 		FragmentManager fm = getFragmentManager();
 		FragmentTransaction transaction = fm.beginTransaction();
-
-		/*if (!withoutAnimation && !isAnimationDisabled && currentFragment.shouldAnimate()) {
+/*
+		if (!withoutAnimation && currentFragment.shouldAnimate()) {
 			if (newFragmentType.isRightOf(currentFragment)) {
 				transaction.setCustomAnimations(R.anim.slide_in_right_to_left,
 						R.anim.slide_out_right_to_left,
@@ -1586,7 +1586,7 @@ public class LinphoneActivity extends LinphoneGenericActivity implements OnClick
 				}
 			});
 		} else {
-			address.setText(proxy.getAddress().asStringUriOnly());
+			//address.setText(proxy.getAddress().asStringUriOnly());
 			displayName.setText(LinphoneUtils.getAddressDisplayName(proxy.getAddress()));
 			status.setImageResource(getStatusIconResource(proxy.getState()));
 			status.setVisibility(View.VISIBLE);

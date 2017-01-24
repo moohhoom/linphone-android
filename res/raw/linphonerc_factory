@@ -12,9 +12,12 @@ register_only_when_network_is_up=1
 auto_net_state_mon=0
 auto_answer_replacing_calls=1
 ping_with_options=0
-rls_uri=sip:rls@sip.linphone.org
-use_rls_presence=1
-
+use_rls_presence=0
+sip_port=5060
+sip_tcp_port=5060
+sip_tls_port=5061
+verify_server_certs=0
+verify_server_cn=0
 
 [rtp]
 audio_rtp_port=7076
@@ -25,9 +28,6 @@ nortp_timeout=30
 disable_upnp=1
 
 [sound]
-playback_dev_id=
-ringer_dev_id=
-capture_dev_id=
 dtmf_player_amp=0.1
 
 #remove this property for any application that is not Linphone public version itself
@@ -52,4 +52,3 @@ username_length=-1
 username_max_length=64
 username_min_length=1
 username_regex=^[a-z0-9_.\-]*$
-xmlrpc_url=

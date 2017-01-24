@@ -233,7 +233,7 @@ public class CallIncomingActivity extends LinphoneGenericActivity implements Lin
 		} else {
 			name.setText(LinphoneUtils.getAddressDisplayName(address));
 		}
-		number.setText(address.asStringUriOnly());
+		//number.setText(address.asString());
 	}
 
 	@Override

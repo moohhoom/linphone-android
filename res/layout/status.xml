@@ -22,17 +22,6 @@
 			android:layout_alignParentLeft="true"/>
 
 		<ImageView
-			android:id="@+id/call_quality"
-			android:src="@drawable/call_quality_indicator_0"
-			android:contentDescription="@string/content_description_call_quality"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:padding="10dp"
-			android:layout_centerInParent="true"
-			android:layout_alignParentLeft="true"
-			android:visibility="invisible" />
-
-		<ImageView
 			android:id="@+id/status_led"
 			android:src="@drawable/led_disconnected"
 			android:paddingLeft="5dp"
@@ -84,5 +73,18 @@
 			android:layout_centerInParent="true"
 			android:visibility="gone"
 			android:layout_alignParentRight="true" />
+
+		<ImageView
+			android:id="@+id/call_quality"
+			android:src="@drawable/call_quality_indicator_0"
+			android:contentDescription="@string/content_description_call_quality"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:visibility="invisible"
+			android:layout_below="@+id/voicemail"
+			android:layout_toRightOf="@+id/voicemail"
+			android:layout_toEndOf="@+id/voicemail"
+			android:clickable="false" />
 	</RelativeLayout>
 </RelativeLayout>

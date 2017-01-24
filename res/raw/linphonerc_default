@@ -3,14 +3,15 @@ download_bw=380
 upload_bw=380
 
 [sip]
-contact="Linphone Android" <sip:linphone.android@unknown-host>
+contact="Tasqat Android" <sip:Tasqat.android@unknown-host>
 use_info=0
-use_ipv6=1
+use_ipv6=0
 keepalive_period=30000
-sip_port=-1
-sip_tcp_port=-1
+sip_port=5060
+sip_tcp_port=5060
 sip_tls_port=5061
 verify_server_certs=0
+verify_server_cn=0
 
 [video]
 size=qvga
@@ -19,11 +20,3 @@ size=qvga
 tunnel=disabled
 push_notification=1
 auto_start=1
-
-[tunnel]
-host=
-port=443
-
-[misc]
-log_collection_upload_server_url=
-file_transfer_server_url=

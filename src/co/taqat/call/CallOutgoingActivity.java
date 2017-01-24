@@ -118,6 +118,10 @@ public class CallOutgoingActivity extends LinphoneGenericActivity implements OnC
 					}
 				}
 
+				if (call == mCall && State.OutgoingRinging == state) {
+					number.setText("Ringing..");
+				}
+
 				if (LinphoneManager.getLc().getCallsNb() == 0) {
 					finish();
 					return;
@@ -171,7 +175,7 @@ public class CallOutgoingActivity extends LinphoneGenericActivity implements OnC
 		} else {
 			name.setText(LinphoneUtils.getAddressDisplayName(address));
 		}
-		number.setText(address.asStringUriOnly());
+		number.setText("Calling..");//address.asStringUriOnly());
 	}
 
 	@Override

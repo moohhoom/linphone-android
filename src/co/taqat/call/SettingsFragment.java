@@ -317,7 +317,7 @@ public class SettingsFragment extends PreferencesListFragment {
 			if (username == null) {
 				account.setTitle(getString(R.string.pref_sipaccount));
 			} else {
-				account.setTitle(username + "@" + domain);
+				account.setTitle(username );//+ "@" + domain);
 			}
 
 			if (defaultAccountID == i) {

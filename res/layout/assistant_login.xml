@@ -88,7 +88,7 @@
 				android:layout_height="40dp"
 				android:singleLine="true"
 				android:text="52.90.43.252"
-				android:enabled="false"
+				android:enabled="true"
 				android:visibility="invisible" />
 
 			<TextView
@@ -146,7 +146,7 @@
 					android:layout_margin="5dp"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:checked="true" />
+					android:checked="false" />
 
 				<RadioButton
 					android:id="@+id/transport_tcp"
@@ -161,7 +161,7 @@
 					android:layout_margin="5dp"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:checked="false" />
+					android:checked="true" />
 			</RadioGroup>
 
 		</LinearLayout>
