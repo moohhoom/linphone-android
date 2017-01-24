@@ -115,13 +115,20 @@ public class StatusFragment extends Fragment {
 					statusText.setOnClickListener(new OnClickListener() {
 						@Override
 						public void onClick(View v) {
-							if (!isInCall)
-							lc.refreshRegisters();
-
+							if (!isInCall) {
+								lc.refreshRegisters();
+								/*try {
+									Thread.sleep(2000);
+								} catch (InterruptedException e) {
+									Log.e("Cannot sleep for 2s", e);
+								}*/
+							}
 
 						}
 					});
-				} catch (IllegalStateException ise) {}
+				} catch (IllegalStateException ise) {
+					Log.e("ReRegisteration ERROR : ", ise.getMessage());
+				}
 			}
 
 			@Override
@@ -254,7 +261,7 @@ public class StatusFragment extends Fragment {
 				return context.getString(R.string.status_not_connected);
 			}
 		} catch (Exception e) {
-			Log.e(e);
+			Log.e("ERRRORR",e.getMessage());
 		}
 
 		return context.getString(R.string.status_not_connected);

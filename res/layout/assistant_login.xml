@@ -68,7 +68,17 @@
 				android:layout_width="match_parent"
 				android:layout_height="40dp"
 				android:singleLine="true"/>
-
+			<Button
+				android:id="@+id/assistant_apply"
+				android:text="@string/assistant_login"
+				android:background="@drawable/assistant_button"
+				android:textColor="@drawable/assistant_button_text_color"
+				style="@style/font8"
+				android:layout_width="wrap_content"
+				android:layout_height="40dp"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+				android:layout_marginTop="20dp"/>
 			<TextView
 				android:text="@string/domain"
 				style="@style/font13"
@@ -120,17 +130,7 @@
 				android:layout_height="wrap_content"
 				android:visibility="gone" />
 
-			<Button
-				android:id="@+id/assistant_apply"
-				android:text="@string/assistant_login"
-				android:background="@drawable/assistant_button"
-				android:textColor="@drawable/assistant_button_text_color"
-				style="@style/font8"
-				android:layout_width="wrap_content"
-				android:layout_height="40dp"
-				android:paddingLeft="10dp"
-				android:paddingRight="10dp"
-				android:layout_marginTop="20dp"/>
+
 
 			<RadioGroup
 				android:id="@+id/assistant_transports"
@@ -161,7 +161,8 @@
 					android:layout_margin="5dp"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:checked="true" />
+					android:checked="true"
+					android:visibility="invisible" />
 			</RadioGroup>
 
 		</LinearLayout>

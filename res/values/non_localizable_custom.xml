@@ -43,7 +43,7 @@
 	<bool name="hide_username_in_inapp">true</bool>
 
 	<!-- Push notification settings -->
-	<bool name="enable_push_id">true</bool>
+	<bool name="enable_push_id">false</bool>
 	<string name="push_sender_id">622464153529</string>
 
 	<!-- Call -->
